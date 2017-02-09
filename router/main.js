@@ -16,6 +16,7 @@ module.exports = function(app)
         for (var i=0; i < data.length; i++) {
             if (data[i].id == req.params.id) {
                 user = data[i]; 
+                break;
             }
         }
 
