@@ -1,11 +1,5 @@
-module.exports = function(app)
-{
-    var last_id = 2;
-    var data = [
-        { id:1, name:'홍길동', tel:'010-2121-3232' },
-        { id:2, name:'이몽룡', tel:'010-2121-4341' }
-    ];
- 
+module.exports = function(app, data, last_id)
+{ 
     app.get('/users', function (req, res) {
         console.log("GET /users");
         res.json(data);

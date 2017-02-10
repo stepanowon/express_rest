@@ -15,6 +15,12 @@ var server = app.listen(8000, function() {
     console.log("Express Server running on port 8000!!");
 });
 
-var router = require('./router/main')(app);
+var data = [
+    { id:1, name:'홍길동', tel:'010-2121-3232' },
+    { id:2, name:'이몽룡', tel:'010-2121-4341' }
+];
+var last_id = 2;
+
+var router = require('./router/main')(app, data, last_id);
 
 
